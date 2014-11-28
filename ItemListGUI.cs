@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Colslections;
+using System.Collections;
 using System.Collections.Generic;
 
 public class ItemListGUI : MonoBehaviour {
@@ -13,6 +13,10 @@ public class ItemListGUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+	
+	public static int getCount (){
+		return list.Count;
 	}
 	
 	void OnGUI () {

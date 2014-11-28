@@ -9,7 +9,7 @@ public class DialogBox : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-	
+		
 	}
 	
 	// Update is called once per frame
@@ -28,7 +28,7 @@ public class DialogBox : MonoBehaviour {
 			GUI.Label (new Rect(Screen.width / 2 - 410,Screen.height / 2 - 200, 800,600),background);
 			GUI.Label (new Rect(Screen.width / 2 - 250,Screen.height / 2 - 75, 121, 147),portrait);
 			GUI.Label (new Rect(Screen.width / 2,Screen.height / 2 - 100, 300, 200),"<color=black>" + value + "</color>");
-			if (GUI.Button (new Rect (Screen.width / 2 - 37,Screen.height - 175,75,25), "Next")) {
+			if (GUI.Button (new Rect (Screen.width / 2 - 37,Screen.height / 2 + 50,75,25), "Next")) {
 				drawGUI = false;
 			}
 		}

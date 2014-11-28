@@ -1,8 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ClickItem : MonoBehaviour {
+public class StartDialogBox : MonoBehaviour {
 
+	public Texture2D texture;
+	public string textField;
+	
 	// Use this for initialization
 	void Start () {
 		
@@ -12,9 +15,9 @@ public class ClickItem : MonoBehaviour {
 	void Update () {
 	
 	}
-	
+
 	void OnMouseDown () {
-		ItemListGUI.add(this.gameObject.name);
-		Destroy(this.gameObject);
+		DialogBox.DrawGUI(textField, texture);
+		Bygning.oldLady = true;
 	}
 }
