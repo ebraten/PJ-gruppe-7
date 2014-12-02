@@ -5,7 +5,7 @@ public class ClickItem : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		ItemListGUI.add(this.gameObject.name);
 	}
 	
 	// Update is called once per frame
@@ -14,7 +14,7 @@ public class ClickItem : MonoBehaviour {
 	}
 	
 	void OnMouseDown () {
-		ItemListGUI.add(this.gameObject.name);
+		ItemListGUI.remove(this.gameObject.name);
 		Destroy(this.gameObject);
 	}
 }

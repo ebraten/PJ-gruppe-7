@@ -20,11 +20,10 @@ public class ItemListGUI : MonoBehaviour {
 	}
 	
 	void OnGUI () {
-		int height = 0;
-		GUI.Box(new Rect(0,0,100,100), "List of items");
+		int height = 35;
 		foreach (string e in list) {
-			height += 2;
-			GUI.Label (new Rect (15, height * 10, 100, 100), e);
+			GUI.Label (new Rect (30, height, 100, 100), "<color=black>Finn " + e + "</color>");
+			height += 10;
 		}
 	}
 	
