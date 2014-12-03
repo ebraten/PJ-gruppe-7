@@ -3,6 +3,7 @@ using System.Collections;
 
 public class MoveToNext : MonoBehaviour {
 	void OnMouseDown () {
-		Application.LoadLevel(1);
+		//Moves to another scene
+		Application.LoadLevel(tag);
 	}
 }

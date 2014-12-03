@@ -2,18 +2,8 @@
 using System.Collections;
 
 public class backtostart : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-	
 	void OnMouseDown () {
+		//Loads Application on click
 		Application.LoadLevel(0);
 	}
 }

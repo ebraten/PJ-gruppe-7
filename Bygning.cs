@@ -2,10 +2,12 @@
 using System.Collections;
 
 public class Bygning : MonoBehaviour {
-	public static bool oldLady = false;
+	//The order the buildings will be unlocked
+	public int buildingNr;
 
 	void OnMouseDown() {
-		if (oldLady)
+		//Checks if building is unlocked
+		if (PlayerPrefs.GetInt("Buildings") >= buildingNr)
 			Application.LoadLevel(2);
     }
 }
