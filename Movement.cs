@@ -4,12 +4,30 @@ public class Movement : MonoBehaviour {
 
 	public float speed = 1.5f;
 	private Vector3 target;
+	private Vector3 currentDirection = Vector3.zero;
+	
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		currentDirection = Vector3.zero;
+		this.rigidbody2D.velocity = Vector3.zero;
+	}
 
 	void Start () {
 		target = transform.position;
 	}
 
 	void Update () {
+
+		if (currentDirection.Equals(Vector3.zero))
+		{
+			Vector3 inputDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
+			if (!inputDirection.Equals(Vector3.zero))
+			{
+				currentDirection = inputDirection;
+				this.rigidbody2D.velocity = currentDirection * speed;
+			}
+		}
+
 		if (Input.GetMouseButtonDown(0)) {
 			target = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 			target.z = transform.position.z;
