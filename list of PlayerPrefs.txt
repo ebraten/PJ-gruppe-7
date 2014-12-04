@@ -1,0 +1,2 @@
+Int "Buildings" = Number of buildings unlocked, used to unlock buildings in the correct order.
+Int "Items" = List of items found
