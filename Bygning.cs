@@ -8,6 +8,6 @@ public class Bygning : MonoBehaviour {
 	void OnMouseDown() {
 		//Checks if building is unlocked
 		if (PlayerPrefs.GetInt("Buildings") >= buildingNr)
-			Application.LoadLevel(2);
+			Application.LoadLevel(tag);
     }
 }

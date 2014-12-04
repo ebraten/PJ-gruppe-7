@@ -20,12 +20,17 @@ public class ItemListGUI : MonoBehaviour {
 	}
 	
 	public static void add (string name) {
-		Debug.Log("Added: " + name);
-		list.Add(name);
+		if (!list.Contains(name))
+		{
+			Debug.Log("Added: " + name);
+			list.Add(name);
+		}
 	}
 	
 	public static void remove (string name) {
 		Debug.Log("Removed: " + name);
 		list.Remove(name);
+		PlayerPrefs.SetInt("Items", PlayerPrefs.GetInt("Items") + 1);
+		Debug.Log("Items found: " + PlayerPrefs.GetInt("Items"));
 	}
 }
