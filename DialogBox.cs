@@ -5,9 +5,10 @@ public class DialogBox : MonoBehaviour {
 	private static bool drawGUI = false;
 	//Value and Portrait are given to the character they are related to
 	private static string value;
+	public Texture2D background;
 	private static Texture2D portrait;
 	//Background is same for all
-	public Texture2D background;
+	
 	
 	public static void DrawGUI (string textField, Texture2D inputImage) {
 		//When this method is called, the gui is made
