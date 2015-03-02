@@ -10,7 +10,8 @@ public class Movement : MonoBehaviour {
 	{
 		currentDirection = Vector3.zero;
 		this.rigidbody2D.velocity = Vector3.zero;
-		TutorialGUI.drawGUI = true;
+		//This is new
+		Quest.drawQuest = true;
 	}
 
 	void Start () {
@@ -18,7 +19,8 @@ public class Movement : MonoBehaviour {
 	}
 
 	void Update () {
-		if (!TutorialGUI.drawGUI){
+		//This is new and goes around entire Update
+		if (!Quest.drawQuest /*or*/ !Closedbook.open){
 		if (currentDirection.Equals(Vector3.zero))
 		{
 			Vector3 inputDirection = new Vector3(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"), 0);
