@@ -5,7 +5,9 @@ public class destroyforstør : MonoBehaviour {
 	
 	void OnMouseDown()
 	{
-		GettingMouse.mouse = true;
+		GettingToolForstorr.show = true;
+		GettingObjectiveForstorr.show = true;
+		//GettingMouse.mouse = true;
 		Destroy(gameObject);
 	}
 }
