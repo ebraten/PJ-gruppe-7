@@ -8,7 +8,7 @@ public class fade : MonoBehaviour {
 
 	private int drawDepth = 1;
 	private float alpha = 1.0f;
-	private int fadeDir = 1;
+	private int fadeDir = -1000;
 
 	//funker ikke helt
 
